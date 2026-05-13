@@ -1,0 +1,5 @@
+{
+  "version": "0.1.0",
+  "organization": "NVIDIA",
+  "abstract": "Consolidated user-facing NemoClaw guidance for setup, configuration, operations, security, monitoring, troubleshooting, and reference workflows."
+}
