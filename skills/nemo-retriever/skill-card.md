@@ -1,5 +1,5 @@
 ## Description: <br>
-Use when the user wants to search, query, extract, transcribe, describe, quote, filter, or aggregate across documents — PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), text (.html .txt), audio (.mp3 .wav .m4a), or video (.mp4 .mov). <br>
+Use this to pull a specific figure, fact, quote, or table value out of a collection of documents and cite the exact source file and page. Built for question-answering over a folder of reports — annual reports, 10-Ks and financial filings, research PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), HTML / TXT, audio, or video. It indexes the whole corpus once, then finds the right document among many and returns the value with its page number — useful when several documents or figures look alike and you need the correct one, not a near-match. <br>
 
 This skill is ready for commercial/non-commercial use. <br>
 
