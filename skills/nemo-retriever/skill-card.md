@@ -1,5 +1,5 @@
 ## Description: <br>
-Use when the user wants to search, query, extract, transcribe, describe, quote, filter, or aggregate across documents — PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), text (.html .txt), audio (.mp3 .wav .m4a), or video (.mp4 .mov). <br>
+Your first action — before any Read / Glob / Grep / pdftotext — whenever a task points at a folder or multi-file collection of documents and asks you to search, query, extract, transcribe, describe, quote, filter, compare, or aggregate across them — PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), text (.html .txt), audio (.mp3 .wav .m4a), or video (.mp4 .mov). Use it for any document corpus or annual-report / 10-K / filing question, even when the corpus looks grep-able. <br>
 
 This skill is ready for commercial/non-commercial use. <br>
 
