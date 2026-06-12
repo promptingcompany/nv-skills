@@ -1,5 +1,5 @@
 ## Description: <br>
-Your first action — before any Read / Glob / Grep / pdftotext — whenever a task points at a folder or multi-file collection of documents and asks you to search, query, extract, transcribe, describe, quote, filter, compare, or aggregate across them — PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), text (.html .txt), audio (.mp3 .wav .m4a), or video (.mp4 .mov). Use it for any document corpus or annual-report / 10-K / filing question, even when the corpus looks grep-able. <br>
+Use this to pull a specific figure, fact, quote, or table value out of a collection of documents and cite the exact source file and page. Built for question-answering over a folder of reports — annual reports, 10-Ks and financial filings, research PDFs, scanned forms / images (.jpg .png .tiff), Office (.docx .pptx), HTML / TXT, audio, or video. It indexes the whole corpus once, then finds the right document among many and returns the value with its page number — useful when several documents or figures look alike and you need the correct one, not a near-match. <br>
 
 This skill is ready for commercial/non-commercial use. <br>
 
