@@ -1,5 +1,5 @@
 ## Description: <br>
-Cosmos-Reason2-8B video QA supervised fine-tuning with FSDP parallelism for training and evaluating video question-answering models. <br>
+Cosmos3-Nano video QA supervised fine-tuning with FSDP parallelism. <br>
 
 This skill is ready for commercial/non-commercial use. <br>
 
@@ -7,24 +7,30 @@ This skill is ready for commercial/non-commercial use. <br>
 NVIDIA <br>
 
 ### License/Terms of Use: <br>
-Apache 2.0 <br>
+Apache-2.0 <br>
 ## Use Case: <br>
-Developers and engineers who need to train, evaluate, quantize, or run inference on Cosmos-Reason2-8B for video question-answering and video reasoning tasks using FSDP-based parallelism. <br>
+Developers and engineers training or evaluating video question-answering models, fine-tuning Cosmos3-Nano or compatible Cosmos Reason models with SFT/LoRA. <br>
 
 ### Deployment Geography for Use: <br>
 Global <br>
+
+## Requirements / Dependencies: <br>
+**Requires API Key or External Credential:** [Yes] <br>
+**Credential Type(s):** [API key] <br>  
+
+Do not include secrets in prompts/logs/output; use least-privilege credentials; rotate keys as appropriate. <br>
 
 ## Known Risks and Mitigations: <br>
 Risk: Review before execution as proposals could introduce incorrect or misleading guidance into skills. <br>
 Mitigation: Review and scan skill before deployment. <br>
 
 ## Reference(s): <br>
-- [Cosmos-Reason2-8B Model (Hugging Face)](https://huggingface.co/nvidia/Cosmos-Reason2-8B) <br>
-- [Datasets Reference](references/datasets.md) <br>
-- [Parameters Reference](references/parameters.md) <br>
-- [Evaluate Reference](references/evaluate.md) <br>
-- [Spec Construction Reference](references/spec-construction.md) <br>
-- [Troubleshooting Reference](references/troubleshooting.md) <br>
+- [cosmos-reason-launch.md](references/cosmos-reason-launch.md) <br>
+- [cosmos-reason-evaluate.md](references/cosmos-reason-evaluate.md) <br>
+- [cosmos-reason-automl.md](references/cosmos-reason-automl.md) <br>
+- [cosmos-reason-parameters.md](references/cosmos-reason-parameters.md) <br>
+- [Cosmos3-Nano on Hugging Face](https://huggingface.co/nvidia/Cosmos3-Nano) <br>
+- [NVIDIA TAO Skill Bank](https://github.com/NVIDIA-TAO/tao-skills-bank) <br>
 
 
 ## Skill Output: <br>
@@ -34,13 +40,13 @@ Mitigation: Review and scan skill before deployment. <br>
 **Other Properties Related to Output:** [None] <br>
 
 ## Evaluation Agents Used: <br>
-- claude-code <br>
-- codex <br>
+- Claude Code (`claude-code`) <br>
+- Codex (`codex`) <br>
 
 
 
 ## Evaluation Tasks: <br>
-Evaluated against 1 evaluation task with 2 attempts per task in the astra-sandbox environment using the NVSkills-Eval external profile. <br>
+Evaluated against 1 internal evaluation task via NVSkills-Eval (external profile). <br>
 
 ## Evaluation Metrics Used: <br>
 Reported benchmark dimensions: <br>
@@ -64,11 +70,11 @@ Underlying evaluation signals used in this run: <br>
 ## Evaluation Results: <br>
 | Dimension | Num | `claude-code` | `codex` |
 |---|---:|---:|---:|
-| Security | 2 | 100% (+0%) | 100% (+0%) |
-| Correctness | 2 | 100% (+100%) | 58% (+40%) |
-| Discoverability | 2 | 86% (+86%) | 48% (+17%) |
-| Effectiveness | 2 | 86% (+59%) | 57% (+46%) |
-| Efficiency | 2 | 70% (+43%) | 62% (+17%) |
+| Security | 1 | 100% (+0%) | 100% (+0%) |
+| Correctness | 1 | 100% (+100%) | 20% (+20%) |
+| Discoverability | 1 | 85% (+85%) | 0% (+0%) |
+| Effectiveness | 1 | 100% (+86%) | 48% (+34%) |
+| Efficiency | 1 | 68% (+41%) | 28% (-0%) |
 
 ## Skill Version(s): <br>
 0.1.0 (source: frontmatter) <br>

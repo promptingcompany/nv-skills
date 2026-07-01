@@ -1,10 +1,11 @@
 name: nvidia-skills
 
+version: "1.1.0"
 description: Skills for NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.
 
 display_name: NVIDIA
 short_description: Guided help for NVIDIA AI, GPU, robotics, simulation, and 3D workflows.
-long_description: NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.
+long_description: NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, data loading, training, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.
 
 category: Coding
 logo: ./assets/nvidia.png
@@ -16,6 +17,8 @@ keywords:
   - gpu
   - cuda
   - ai-agents
+  - data-loading
+  - training
   - inference
   - llm-serving
   - robotics
@@ -38,8 +41,8 @@ include_skills:
   # AIQ / NeMo Agent Toolkit
   - skills/aiq-deploy/
   - skills/aiq-research/
-  # NeMoClaw
-  - skills/nemoclaw-user-get-started/
+  # NemoClaw
+  - skills/nemoclaw-user-guide/
   # Dynamo
   - skills/dynamo-router-starter/
   - skills/dynamo-interconnect-check/
@@ -50,14 +53,17 @@ include_skills:
   - skills/omniverse-usd-performance-tuning/
   - skills/omniverse-realtime-viewer/
   # cuOpt
-  - skills/cuopt-user-rules/
+  - skills/cuopt-numerical-optimization-api-python/
+  # DALI
+  - skills/dali-dynamic-mode/
 
 
 # Inherits from plugins.d/_defaults.yml:
 #   version, author, homepage, repository, license,
 #   brand_color, capabilities
 
-# By default this plugin is added (true) in both self-hosted marketplace.json files. Uncomment to opt out.
+# By default this plugin is added (true) in all self-hosted marketplace.json files. Uncomment to opt out.
 # marketplace_enabled:
 #   claude: false
 #   codex: false
+#   cursor: false
