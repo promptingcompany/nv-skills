@@ -1,7 +1,6 @@
 ---
 name: nemo-automodel-distributed-training
-description: Guide for selecting and configuring distributed training strategies in NeMo AutoModel, including FSDP2, Megatron FSDP, DDP, and parallelism settings.
-when_to_use: Adding or modifying distributed training strategies (FSDP2, HSDP, DDP), debugging multi-GPU or multi-node failures, configuring context or tensor parallelism, or tuning sharding settings.
+description: Guide for selecting and configuring distributed training strategies in NeMo AutoModel, including FSDP2, Megatron FSDP, DDP, and parallelism settings. Use when adding or modifying distributed training strategies (FSDP2, HSDP, DDP), debugging multi-GPU or multi-node failures, configuring context or tensor parallelism, or tuning sharding settings.
 license: Apache-2.0
 metadata:
   author: NVIDIA
@@ -17,7 +16,7 @@ metadata:
 NeMo AutoModel uses PyTorch-native distributed training.
 All parallelism is orchestrated through a single `MeshContext` object that
 holds device meshes, strategy configs, and axis names.
-<!-- NVSkills signature refresh requested for AM-519. -->
+<!-- NVSkills catalog signing requested after PR #2937 (2026-07-31). -->
 
 ## Instructions
 
@@ -392,6 +391,11 @@ distributed:
     wrap_outer_model: true
 ```
 
+`activation_checkpointing: moe` (expert-parallel FSDP2 only, needs
+`ignore_router_for_ac: true`) checkpoints just each decoder block's MoE
+sub-block and keeps attention / linear-attention / residual-mixing
+activations: less recompute for more activation memory.
+
 The `moe` sub-section maps to `MoEParallelizerConfig` and is only
 instantiated when `ep_size > 1`.
 
@@ -528,7 +532,7 @@ components/distributed/pipelining/hf_utils.py      -- HF model validation for PP
 Context parallelism:
 
 ```
-components/distributed/cp_utils.py
+components/distributed/context_parallel/utils.py
     make_cp_batch_and_ctx()            -- creates CP context manager + shards batch
     create_context_parallel_ctx()      -- wraps torch.distributed.tensor.experimental.context_parallel
     attach_context_parallel_hooks()    -- strips attention_mask, sets is_causal=True
