@@ -57,7 +57,7 @@ uv run python -m torch.distributed.run --nproc_per_node=1 \
   --recipe vanilla_gpt_pretrain_config \
   model.num_layers=2 model.hidden_size=256 \
   model.num_attention_heads=4 model.ffn_hidden_size=1024 \
-  model.seq_length=512 dataset.sequence_length=512 \
+  model.seq_length=512 dataset.seq_length=512 \
   train.train_iters=10 train.global_batch_size=32 train.micro_batch_size=4 \
   validation.eval_interval=10 validation.eval_iters=2 \
   optimizer.lr=3e-4 optimizer.min_lr=3e-5 \
@@ -99,7 +99,7 @@ uv run python -m torch.distributed.run --nproc_per_node=2 \
   model.tensor_model_parallel_size=2 model.sequence_parallel=true \
   model.num_layers=4 model.hidden_size=256 \
   model.num_attention_heads=4 model.ffn_hidden_size=1024 \
-  model.seq_length=1024 dataset.sequence_length=1024 \
+  model.seq_length=1024 dataset.seq_length=1024 \
   train.train_iters=10 train.global_batch_size=16 train.micro_batch_size=2 \
   validation.eval_interval=10 validation.eval_iters=2 \
   scheduler.lr_warmup_iters=2 scheduler.lr_decay_iters=10 \
@@ -115,7 +115,6 @@ Common recipes (use with `--recipe`):
 - `llama32_1b_pretrain_config` — Llama 3.2 1B (16L, 2048H, GBS=512, seq=8192)
 - `llama3_8b_pretrain_config` — Llama 3 8B
 - `qwen3_8b_pretrain_config` — Qwen3 8B
-- `deepseek_v2_lite_pretrain_config` — DeepSeek-V2-Lite 16B MoE
 
 SFT/PEFT variants use `_sft_config` / `_peft_config` suffix.
 
@@ -169,7 +168,7 @@ git submodule update --init 3rdparty/Megatron-LM
    value, also set `scheduler.lr_warmup_iters` and `scheduler.lr_decay_iters`
    or you get an assertion error.
 
-5. **Use `dataset.sequence_length`** in CLI overrides, not `dataset.seq_length`.
+5. **Use `dataset.seq_length`** in CLI overrides for both pretraining and fine-tuning datasets.
 
 6. **MoE OOM**: Large MoE models require full activation recomputation and
    typically multi-node EP. TP does NOT reduce per-GPU expert memory.
